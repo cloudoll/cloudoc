@@ -41,8 +41,9 @@ node index.js
 
 访问 http://localhost:8801/view
 
-无需改动 cloudeer 任何代码，然后打完收工!
+无需改动 cloudeer 任何代码。
 
+打完收工!
 
 ### 使用 cloudoll 创建一个微服务
 
@@ -93,6 +94,15 @@ module.exports = {
 };
 
 ```
+
+请使 cloudeer 服务运行先。
+
+现在启动服务：
+
+```
+node index.js
+```
+
 
 现在访问一下试试
 
