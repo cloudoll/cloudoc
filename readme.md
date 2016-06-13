@@ -55,9 +55,7 @@ node index.js
 npm i cloudoll --save
 ```
 
-创建一个目录: ./config
-
-创建一个文件： ./config/development.js 内容如下：
+创建一个文件： /config/development.js 内容如下：
 
 ```
 module.exports = {
@@ -71,7 +69,7 @@ module.exports = {
 };
 ```
 
-创建一个入口文件 ./index.js
+创建一个入口文件 index.js
 
 ```
 var KoaApp = require('cloudoll').KoaApplication;
@@ -82,9 +80,7 @@ var cloudeer = app.cloudeer;
 
 上面的两个变量  router 和 cloudeer 留着待用。
 
-现在创建目录 ./api/open
-
-创建文件 ./api/open/hello.js
+创建文件 /api/open/hello.js
 
 ```
 module.exports = {
@@ -122,15 +118,27 @@ http://localhost:8801/methods
 
 万里长征才走完第一步。
 
-cloudoll 还有更多的功能：
+# cloudoll has more...
 
-* 自定义错误
+cloudoll 包含更多的功能，其中大多数功能都可以单独拿出来独立使用：
 
-* 数据的简洁访问
+* 内置的 KoaApplication (上面的例子用的是这个)
+
+* 错误/例外处理
+
+* 自动路由
+
+* 数据的快捷访问 mongo
+
+* 数据的快捷访问 mysql
+
+* 包含数据访问的服务层和控制层的基类（对应传统的MVC）
 
 * schema 的自动验证
 
 * 作为消费者调用远程其他微服务
+
+* 权限验证（路由级别）
 
 * 内网接口的防火墙功能（正在实现）
 
