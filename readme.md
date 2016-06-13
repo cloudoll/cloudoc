@@ -41,12 +41,12 @@ node index.js
 
 访问 http://localhost:8801/view
 
-打完收工!
+无需改动 cloudeer 任何代码，然后打完收工!
 
 
 ### 使用 cloudoll 创建一个微服务
 
-创建一个 node 应用程序 （怎么创建 略）。
+创建一个 node 应用程序 （怎么创建？自己去研究咯）。
 
 引入 cloudoll 包
 
@@ -62,20 +62,18 @@ npm i cloudoll --save
 module.exports = {
   debug         : true,
   port          : 22221,
-  cloudeer      : {
-    serviceHost: "http://127.0.0.1:8801",
-    myHost     : 'localhost'
-  },
-  controllerDirs: ['/api/open', '/api/admin'],
-  schemaPath    : './schema',
-  myErrorsPath  : './my-errors.js'
+  cloudeer_url  : "http://127.0.0.1:8801",
+  my_ip         : "127.0.0.1",
+  controller_dirs: ['/api/open', '/api/admin'],
+  schema_path    : './schema',
+  my_errors_path  : './my-errors.js'
 };
 ```
 
 创建一个入口文件 ./index.js
 
 ```
-var KoaApp = require('./').KoaApplication;
+var KoaApp = require('cloudoll').KoaApplication;
 var app    = KoaApp();
 var router = app.router;
 var cloudeer = app.cloudeer;
