@@ -122,7 +122,7 @@ http://localhost:8801/methods
 
 cloudoll 包含更多的功能，其中大多数功能都可以单独拿出来独立使用：
 
-* 内置的 KoaApplication (上面的例子用的是这个)
+* [内置的 KoaApplication (上面的例子用的是这个)](./KoaApplication.md)
 
 * 错误/例外处理
 
@@ -141,17 +141,3 @@ cloudoll 包含更多的功能，其中大多数功能都可以单独拿出来�
 * 权限验证（路由级别）
 
 * 内网接口的防火墙功能（正在实现）
-
-
-
-
-
-
-
-
-
-
-
-
-
-
