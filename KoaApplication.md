@@ -22,7 +22,7 @@ module.exports = {
     authenticate   : true
   },
   cloudeer             : {
-    server             : "http://112.74.29.211:8801",
+    server             : "http://127.0.0.1:8801",
     not_a_consumer     : false,
     not_a_service      : false,
     no_methods_register: false
