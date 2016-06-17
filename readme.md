@@ -75,7 +75,7 @@ git clone https://code.aliyun.com/cloudark/cloudeer.git
 npm install
 ```
 
-手工创建一个 ./data 的目录用来存储数据
+手工创建一个 /data 的目录用来存储数据。
 
 运行：
 
