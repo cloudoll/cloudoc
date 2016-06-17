@@ -140,23 +140,24 @@ var app   = new cloudoll.KoaApplication({
 程序自动映射了下面三个路由：
 
 
-POST /cloudeer
+**POST /cloudeer**
 
 参数示例：
 ```json
 {
-    method: "GET",
-    service: "cloudarling",
-    url: "/open/account/login",
-    params: { passport: 'xxx', password: 'xxxxxxx' }
+    "method": "GET",
+    "service": "cloudarling",
+    "url": "/open/account/login",
+    "params": { "passport": "xxx", "password": "xxxxxxx" }
 }
 ```
 
-POST /cloudeer/get
+
+**POST /cloudeer/get**
 
 参数和上面的原型一样。默认 method 为 GET。
 
-POST /cloudeer/post
+**POST /cloudeer/post**
 
 参数和上面的原型一样。默认 method 为 POST。
 
