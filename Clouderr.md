@@ -183,3 +183,21 @@ errors.success({a:1});
 这个方法用于加载 json 配置文件。
 
 
+## koa 中间件：errorsHandleAhead 和 errorsHandleBehind
+
+```javascript
+
+var KoaMiddle = require('cloudoll').KoaMiddle;
+var koaMiddle = new KoaMiddle();
+
+app.use(koaMiddle.errorsHandleAhead);
+
+//....其他中间件
+
+app.use(koaMiddle.errorsHandleBehind);
+
+```
+
+有了这两个中间键，我就可以在我的代码中随处 throw 了。
+
+并且能得到正确的最终错误结果。
