@@ -127,7 +127,7 @@ http://localhost:8801/methods
 
 cloudoll 包含更多的功能，其中大多数功能都可以单独拿出来独立使用：
 
-* [内置的 KoaApplication (上面的例子用的是这个)](./KoaApplication.md)
+* [KoaApplication (上面的例子用的是这个)](./KoaApplication.md)
 
 * [错误/例外处理](./Clouderr.md)
 
