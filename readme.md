@@ -57,7 +57,7 @@ npm i cloudoll --save
 
 创建一个文件： /config/development.js 内容如下：
 
-```
+```javascript
 module.exports = {
   debug         : true,
   port          : 22221,

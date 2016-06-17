@@ -6,7 +6,7 @@
 
 先看看配置文件 /config/develepment.js
 
-```
+```javascript
 module.exports = {
   debug                : true,
   app_name             : "cloudoll",
@@ -39,7 +39,7 @@ module.exports = {
 
 下面的例子将启动 /config/product.js 配置文件
 
-```
+```javascript
 process.env.NODE_ENV = "product";
 var koaApp = new KoaApplication();
 ```
@@ -63,7 +63,7 @@ export NODE_ENV='product'
 
 你也可以加载自定义的错误集合，代码示例如下：
 
-```
+```javascript
 // 默认放在根目录下： errors.js
 // 这个文件的文件名可以配置，配置节点为：
 // my_errors_path: './my-errors.js',
@@ -79,13 +79,13 @@ module.exports = {
 
 errors.CUSTOM00 需要通过方法调用。
 
-```
+```javascript
 throw errors.CUSTOM00('我爱xxx');
 ```
 
 errors.SYSTEM_ERROR01  直接调用，他已经是一个 Clouderr 的实例了。
 
-```
+```javascript
 throw errors.SYSTEM_ERROR01;
 ```
 
@@ -100,7 +100,7 @@ throw errors.SYSTEM_ERROR01;
 
 可以通过配置文件关闭：
 
-```
+```javascript
 koa_middles_forbidden: {
     clouderr_handle: true
 }
@@ -124,7 +124,7 @@ koa_middles_forbidden: {
 
 前置中间键将放入构造函数中，示例如下：
 
-```
+```javascript
 var cloudoll = require('cloudoll');
 
 var serve = require('koa-static');
@@ -143,7 +143,7 @@ var app   = new cloudoll.KoaApplication({
 POST /cloudeer
 
 参数示例：
-```
+```javascript
 {
     method: "GET",
     service: "cloudarling",
@@ -167,7 +167,7 @@ POST /cloudeer/post
 
 可以通过配置文件关闭：
 
-```
+```javascript
 koa_middles_forbidden: {
     authenticate: true
 }
@@ -177,7 +177,7 @@ koa_middles_forbidden: {
 
 下面的配置节点必须为 false （或删除此配置）。
 
-```
+```javascript
 cloudeer: {
     not_a_consumer: false
 }
