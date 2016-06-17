@@ -40,6 +40,7 @@ module.exports = {
 下面的例子将启动 /config/product.js 配置文件
 
 ```javascript
+var KoaApplication = require('cloudoll').KoaApplication;
 process.env.NODE_ENV = "product";
 var koaApp = new KoaApplication();
 ```
