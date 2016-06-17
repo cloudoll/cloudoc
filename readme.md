@@ -40,7 +40,7 @@ require('cloudoll').KoaApplication();
 
 ```
 module.exports = {
-  world: function () {
+  world: function *() {
     this.body = "你好世界。";
   }
 };
@@ -67,7 +67,9 @@ http://localhost:3000/open/hello/world
 git clone https://code.aliyun.com/cloudark/cloudeer.git
 ```
 
-进入到目录，进行 node 前戏工作。
+如果 https 不好使，使用 http 。
+
+进入到目录，进行 node 前戏工作 。
 
 ```
 npm install
@@ -110,9 +112,12 @@ module.exports = {
 };
 ```
 
+其中 cloudeer 节点的配置会将这个应用变成分布式的微服务。
+
+
 重启一下咯。
 
-稍等一下访问
+现在访问注册中心看看：
 
 http://localhost:8801/view
 
@@ -120,9 +125,8 @@ http://localhost:8801/view
 
 http://localhost:8801/methods
 
-试试。
 
-好像很简单吧！
+好像很简单呀！
 
 万里长征才走完第一步。
 
@@ -130,6 +134,7 @@ http://localhost:8801/methods
 
 ### 4 创建另一个微服务并调用 hello_world 微服务
 
+实在太懒了，今天写不动了。
 
 
 # cloudoll has more...
