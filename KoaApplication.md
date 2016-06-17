@@ -14,7 +14,7 @@ module.exports = {
   port                 : 3000,
   controller_dirs      : ['/api/open', '/api/admin', '/api/inner'],
   schema_path          : './schema',
-  my_errors_path       : './my-errors.js',
+  my_errors_path       : './errors.js',
   koa_middles_forbidden: {
     clouderr_handle: true,
     auto_router    : true,
@@ -34,6 +34,8 @@ module.exports = {
 
 在 linux 或者 mac 下，可以不用配置 my_host。
 
+其实，所有的东西都可以不用配置哦。
+
 
 ## 根据不同的配置文件启动应用
 
@@ -42,7 +44,7 @@ module.exports = {
 ```javascript
 var KoaApplication = require('cloudoll').KoaApplication;
 process.env.NODE_ENV = "product";
-var koaApp = new KoaApplication();
+var app = KoaApplication();
 ```
 
 在实际应用中，可以把 NODE_ENV 配置到系统环境变量中。比如：
@@ -67,8 +69,7 @@ export NODE_ENV='product'
 ```javascript
 // 默认放在根目录下： errors.js
 // 这个文件的文件名可以配置，配置节点为：
-// my_errors_path: './my-errors.js',
-
+// my_errors_path: './my-errors.js'
 module.exports = {
   CUSTOM00      : {errno: -1, errText: "%s"},
   SYSTEM_ERROR01: {errno: -10, errText: "系统错误"}
@@ -90,7 +91,7 @@ errors.SYSTEM_ERROR01  直接调用，他已经是一个 Clouderr 的实例了�
 throw errors.SYSTEM_ERROR01;
 ```
 
-聪明的你可能已经看出，是否需要参数以及参数的个数 是和 %s 的个数相关的。
+聪明的我已经看出了，是否需要参数以及参数的个数 是和 %s 的个数相关的。
 
 [更多的错误处理请看这个文档](./Clouderr.md)
 
@@ -115,8 +116,6 @@ koa_middles_forbidden: {
 * koa-bodyparser [参见这里](https://github.com/koajs/bodyparser)
 
 * queryStringParser 这个插件将 query string 作为 json 放入 this.qs 中。
-
-
 
 
 ### 加载额外前置中间键

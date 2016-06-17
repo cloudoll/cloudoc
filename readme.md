@@ -74,24 +74,18 @@ npm i cloudoll --save
 module.exports = {
   debug         : true,
   port          : 22221,
-  cloudeer_url  : "http://127.0.0.1:8801",
-  my_ip         : "127.0.0.1",
-  controller_dirs: ['/api/open', '/api/admin'],
-  schema_path    : './schema',
-  my_errors_path  : './my-errors.js'
+  cloudeer      :{
+    server: 'http://127.0.0.1:8801'
+  },
+  my_host       : "127.0.0.1"
 };
 ```
 
 创建一个入口文件 index.js
 
 ```
-var KoaApp = require('cloudoll').KoaApplication;
-var app    = KoaApp();
-var router = app.router;
-var cloudeer = app.cloudeer;
+require('cloudoll').KoaApplication();
 ```
-
-上面的两个变量  router 和 cloudeer 留着待用。
 
 创建文件 /api/open/hello.js
 
@@ -103,8 +97,6 @@ module.exports = {
 };
 
 ```
-
-请使 cloudeer 服务运行先。
 
 现在启动服务：
 
