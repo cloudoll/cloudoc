@@ -45,6 +45,9 @@ node index.js
 
 打完收工!
 
+先让这个服务运行着，下面的步骤中还需要依赖这个服务。
+
+
 ### 使用 cloudoll 创建一个微服务
 
 创建一个 node 应用程序 （怎么创建？自己去研究咯）。
@@ -126,7 +129,7 @@ cloudoll 包含更多的功能，其中大多数功能都可以单独拿出来�
 
 * [错误/例外处理](./Clouderr.md)
 
-* 自动路由
+* [自动路由](./autoRouters.md)
 
 * 数据的快捷访问 mongo mysql postgres
 

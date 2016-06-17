@@ -189,6 +189,8 @@ cloudeer: {
 
 ### 自动路由
 
+[具体参考这里](./autoRouters.md)
+
 ### 自动 json-schema 验证
 
 ### 自动提交 cloudeer 的服务注册
