@@ -143,7 +143,7 @@ var app   = new cloudoll.KoaApplication({
 POST /cloudeer
 
 参数示例：
-```javascript
+```json
 {
     method: "GET",
     service: "cloudarling",
