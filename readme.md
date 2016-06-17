@@ -14,22 +14,52 @@
 
 也不用再去关心程序性能问题了。【好吧，我要保证我不会在函数里写死循环！！】
 
-## cloudeer
-
-这是微服务的注册服务器。
-
-## cloudoll
-
-包含了一系列工具，协助快速建立应用程序。
-
-## cloudarling
-
-这是一个微服务，提供 passport 服务，以及权限管理等操作。
-
 
 ## 从 0 开始创建一个微服务
 
-### 运行 cloudeer
+
+### 1. 使用 cloudoll 创建 web 应用
+
+创建一个目录：hello_world, 进去之后输入命令行 npm init。
+
+引入 cloudoll 包
+
+```
+npm i cloudoll --save
+```
+
+
+创建一个入口文件 /index.js
+
+```
+require('cloudoll').KoaApplication();
+```
+
+
+创建文件 /api/open/hello.js
+
+```
+module.exports = {
+  world: function () {
+    this.body = "你好世界。";
+  }
+};
+
+```
+
+现在启动服务：
+
+```
+node index.js
+```
+
+现在访问一下试试
+
+http://localhost:3000/open/hello/world
+
+
+
+### 2. 运行 cloudeer。
 
 从 git 上 下载源码：
 
@@ -57,25 +87,22 @@ node index.js
 
 打完收工!
 
-先让这个服务运行着，下面的步骤中还需要依赖这个服务。
 
+### 3. 分布式的微服务 hello_world
 
-### 使用 cloudoll 创建一个微服务
+好了，接下来，我们把第一步中写的程序变成可以被分布部署的微服务。
 
-创建一个 node 应用程序 （怎么创建？自己去研究咯）。
+创建一个文件： /config/development.js
 
-引入 cloudoll 包
+注意：在第一步创建的那个项目下哦，嫑搞错位置了。
 
-```
-npm i cloudoll --save
-```
-
-创建一个文件： /config/development.js 内容如下：
+内容如下：
 
 ```javascript
 module.exports = {
+  app_name      : "hello_world",
   debug         : true,
-  port          : 22221,
+  port          : 3000,
   cloudeer      :{
     server: 'http://127.0.0.1:8801'
   },
@@ -83,33 +110,7 @@ module.exports = {
 };
 ```
 
-创建一个入口文件 index.js
-
-```
-require('cloudoll').KoaApplication();
-```
-
-创建文件 /api/open/hello.js
-
-```
-module.exports = {
-  world: function () {
-    this.body = "你好世界。";
-  }
-};
-
-```
-
-现在启动服务：
-
-```
-node index.js
-```
-
-
-现在访问一下试试
-
-http://localhost:22221/open/hello/world
+重启一下咯。
 
 稍等一下访问
 
@@ -124,6 +125,12 @@ http://localhost:8801/methods
 好像很简单吧！
 
 万里长征才走完第一步。
+
+如果感兴趣请继续。
+
+### 4 创建另一个微服务并调用 hello_world 微服务
+
+
 
 # cloudoll has more...
 
