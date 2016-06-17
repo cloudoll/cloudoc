@@ -132,7 +132,7 @@ http://localhost:8801/methods
 
 如果感兴趣请继续。
 
-### 4 创建另一个微服务并调用 hello_world 微服务
+### 4. 创建另一个微服务并调用 hello_world 微服务
 
 实在太懒了，今天写不动了。
 
