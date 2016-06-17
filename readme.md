@@ -41,7 +41,7 @@ require('cloudoll').KoaApplication();
 ```
 module.exports = {
   world: function *() {
-    this.body = "你好世界。";
+    this.echo("你好世界。form port: " + process.env.port );
   }
 };
 
@@ -132,9 +132,62 @@ http://localhost:8801/methods
 
 如果感兴趣请继续。
 
-### 4. 创建另一个微服务并调用 hello_world 微服务
+### 4. 创建另一个微服务（wow）并调用 hello_world 微服务
 
-实在太懒了，今天写不动了。
+现在创建另一个微服务，步骤和前面的 hello_world 一样。
+
+你可以直接拷贝过来。但需要改一些关键的地方。
+
+配置中的 app_name 需要改成另一个， 现在改成 wow， 这样他才会变成另一个微服务。
+
+修改 /api/open/hello.js
+
+```
+module.exports = {
+  world: function *() {
+    var res   = yield this.app.cloudeer.invokeCo("GET", "hello_world", "/open/hello/world");
+    this.echo("来自远方的问候: " + res);
+  }
+};
+```
+
+启动服务:
+
+```
+node index.js
+```
+
+看看控制台的输出 http 端口，类似下面的输出，并在浏览器里看看。
+
+```
+Koa Application 正在启动，尝试端口：3002
+Koa Application 启动成功！端口： 3002
+```
+
+
+### 5. 分布部署 hello_world
+
+进入 hello_world 项目。
+
+多几次执行：
+
+```
+node index.js
+```
+
+不要担心端口问题，他会自动寻找合适的端口。
+
+
+### 6. 证明一下
+
+现在你可以去并发执行 wow 的 /open/hello/world 了。
+
+在浏览器中不断的刷新就可以看到结果。
+
+例子中用端口表示了他是从哪个微服务上访问过来的。
+
+
+
 
 
 # cloudoll has more...
