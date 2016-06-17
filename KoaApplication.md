@@ -32,6 +32,8 @@ module.exports = {
 
 ```
 
+在 linux 或者 mac 下，可以不用配置 my_host。
+
 
 ## 根据不同的配置文件启动应用
 
@@ -109,7 +111,7 @@ koa_middles_forbidden: {
 
 ### 已经自动加载的中间键：
 
-* koa-bodyparser [参见这里](https://github.com/koajs/bodyparser）
+* koa-bodyparser [参见这里](https://github.com/koajs/bodyparser)
 
 * queryStringParser 这个插件将 query string 作为 json 放入 this.qs 中。
 
@@ -134,9 +136,8 @@ var app   = new cloudoll.KoaApplication({
 
 ### 自动映射 cloudeer 远程调用
 
-这个功能无法通过配置文件关闭
 
-程序自动映射了下面三个访问：
+程序自动映射了下面三个路由：
 
 
 POST /cloudeer
@@ -160,6 +161,7 @@ POST /cloudeer/post
 参数和上面的原型一样。默认 method 为 POST。
 
 
+这个功能无法通过配置文件关闭
 
 ### 权限验证中间件 authenticate
 
@@ -171,6 +173,26 @@ koa_middles_forbidden: {
 }
 ```
 
+使用权限验证插件的前提本服务必须同时是一个 consumer。
+
+下面的配置节点必须为 false （或删除此配置）。
+
+```
+cloudeer: {
+    not_a_consumer: false
+}
+```
+
 具体参考 这个文档
+
+### 自动路由
+
+### 自动 json-schema 验证
+
+### 自动提交 cloudeer 的服务注册
+
+### 自动提交 cloudeer 的方法列表
+
+### 自动下载 cloudeer 的服务列表
 
 
