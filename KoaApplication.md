@@ -63,6 +63,39 @@ export NODE_ENV='product'
 
 ## features
 
+### koa 的 app 扩展
+
+#### echo
+
+在路由中，可以使用 this.echo("xxxx") 输出结果。
+
+他会自动封装成
+
+```
+{ errno:0, data: "xxxx"}
+```
+
+#### *getCloudeer(service, url, params)
+
+可以是用此方法直接调用一个远程微服务的 GET 方法，这是一个 generator
+
+
+#### *postCloudeer(service, url, params)
+
+调用远程微服务的 POST 方法。
+
+代码示例:
+
+```
+module.exports = {
+  world: function *() {
+    var dist = yield this.getCloudeer("cloudarling", "/open/district/children");
+    this.echo(dist);
+  }
+};
+```
+
+
 ### 自动加载错误集合
 
 提供了完整的快捷错误定义，方便程序中调用。

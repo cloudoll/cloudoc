@@ -145,7 +145,7 @@ http://localhost:8801/methods
 ```
 module.exports = {
   world: function *() {
-    var res   = yield this.app.cloudeer.invokeCo("GET", "hello_world", "/open/hello/world");
+    var res   = yield this.getCloudeer("hello_world", "/open/hello/world");
     this.echo("来自远方的问候: " + res);
   }
 };
