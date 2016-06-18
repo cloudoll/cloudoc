@@ -63,7 +63,9 @@ export NODE_ENV='product'
 
 ## features
 
-### koa 的 app 扩展
+### app.context 扩展方法
+
+可以在方法中使用  this. 直接调用。
 
 #### echo
 
@@ -77,14 +79,16 @@ export NODE_ENV='product'
 
 #### *getCloudeer(service, url, params)
 
-可以是用此方法直接调用一个远程微服务的 GET 方法，这是一个 generator
+可以使用此方法直接调用一个远程微服务的 GET 方法，这是一个 generator
 
 
 #### *postCloudeer(service, url, params)
 
 调用远程微服务的 POST 方法。
 
-代码示例:
+
+
+上面三个方法的代码示例:
 
 ```
 module.exports = {
