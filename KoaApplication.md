@@ -71,8 +71,8 @@ export NODE_ENV='product'
 
 他会自动封装成
 
-```
-{ errno:0, data: "xxxx"}
+```json
+{ "errno": 0, "data": "xxxx"}
 ```
 
 #### *getCloudeer(service, url, params)
