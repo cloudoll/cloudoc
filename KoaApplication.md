@@ -61,11 +61,11 @@ export NODE_ENV='product'
 
 可以！如果没有配置 cloudeer 节点，那么应用程序将会变成一个普通的 自动映射的 koa 框架。
 
-## features
+## KoaApplication 包含如下的一些特性
 
 ### app.context 扩展方法
 
-可以在方法中使用  this. 直接调用。
+可以在路由方法中使用 this. 直接调用。
 
 #### echo
 
@@ -79,12 +79,14 @@ export NODE_ENV='product'
 
 #### *getCloudeer(service, url, params)
 
-可以使用此方法直接调用一个远程微服务的 GET 方法，这是一个 generator
+可以使用此方法直接调用一个远程微服务的 GET 方法，这是一个 generator。
+
+如果没有配置 cloudeer 节点，那么将不会有这个方法。
 
 
 #### *postCloudeer(service, url, params)
 
-调用远程微服务的 POST 方法。
+和 *getCloudeer  一样，调用远程微服务的 POST 方法。
 
 
 
@@ -100,11 +102,46 @@ module.exports = {
 ```
 
 
+
+### 自动映射 cloudeer 远程调用
+
+
+程序自动映射了下面三个路由：
+
+
+**POST /cloudeer**
+
+参数示例：
+```json
+{
+    "method": "GET",
+    "service": "cloudarling",
+    "url": "/open/account/login",
+    "params": { "passport": "xxx", "password": "xxxxxxx" }
+}
+```
+
+
+**POST /cloudeer/get**
+
+参数和上面的原型一样。默认 method 为 GET。
+
+**POST /cloudeer/post**
+
+参数和上面的原型一样。默认 method 为 POST。
+
+这个功能无法通过配置文件关闭，除非删除了 cloudeer 配置节点。
+
+
 ### 自动加载错误集合
 
-提供了完整的快捷错误定义，方便程序中调用。
+KoaApplication 自动加载了 cloudoll 的 errors 模块。
 
-你也可以加载自定义的错误集合，代码示例如下：
+这个模块封装了 web 开发的常用的错误类型，方便开发者在程序中调用。
+
+你也可以加载自定义的错误集合，只需要将下面的代码放到合适的位置就会自动加载。
+
+代码示例如下：
 
 ```javascript
 // 默认放在根目录下： errors.js
@@ -174,35 +211,6 @@ var app   = new cloudoll.KoaApplication({
 ```
 
 
-### 自动映射 cloudeer 远程调用
-
-
-程序自动映射了下面三个路由：
-
-
-**POST /cloudeer**
-
-参数示例：
-```json
-{
-    "method": "GET",
-    "service": "cloudarling",
-    "url": "/open/account/login",
-    "params": { "passport": "xxx", "password": "xxxxxxx" }
-}
-```
-
-
-**POST /cloudeer/get**
-
-参数和上面的原型一样。默认 method 为 GET。
-
-**POST /cloudeer/post**
-
-参数和上面的原型一样。默认 method 为 POST。
-
-
-这个功能无法通过配置文件关闭
 
 ### 权限验证中间件 authenticate
 
@@ -214,7 +222,7 @@ koa_middles_forbidden: {
 }
 ```
 
-使用权限验证插件的前提本服务必须同时是一个 consumer。
+使用权限验证插件的前提本服务必须同时是一个消费端（consumer）。
 
 下面的配置节点必须为 false （或删除此配置）。
 
@@ -227,6 +235,12 @@ cloudeer: {
 具体参考 这个文档
 
 ### 自动路由
+
+KoaApplication 会自动扫描目录，将方法和 url 自动对应起来，就像「传统的 MVC 那样」。
+
+这样，你就可以不用写那些 router 了。
+
+你可以不用担心性能，因为扫描操作只会在程序启动的时候运行一次。
 
 [具体参考这里](./autoRouters.md)
 
