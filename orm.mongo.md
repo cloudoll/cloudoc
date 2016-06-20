@@ -2,6 +2,13 @@
 
 封装了 mongodb，让他访问起来更加简单。
 
+基本和原始的参数保持了一致。
+
+请参考这个链接：
+
+[Node.js MongoDB Driver API](http://mongodb.github.io/node-mongodb-native/2.0/api/)
+
+
 ## 使用方法
 
 连接数据库：
@@ -22,6 +29,10 @@ var res = yield mongo.findOne('collectionName', {_id: ObjectId('xxxxx')}
 
 ## API 列表
 
+以下的 api 中， collectionName 表示的是集合名称。
+
+其他的参数和原驱动保持了一致。
+
 ### connect
 
 连接数据库，这个方法一般在你的 web 应用启动的时候执行一次就可以了。
@@ -29,8 +40,6 @@ var res = yield mongo.findOne('collectionName', {_id: ObjectId('xxxxx')}
 ```
 function (dbUrl)
 ```
-
-
 
 ### find
 
