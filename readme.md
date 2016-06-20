@@ -6,19 +6,19 @@
 
 * [从 0 开始创建微服务](#from0)
 
-* [KoaApplication](./KoaApplication.md)
+* [KoaApplication](KoaApplication.md)
 
-* [错误/例外处理](./Clouderr.md)
+* [错误/例外处理](Clouderr.md)
 
-* [自动路由](./autoRouters.md)
+* [自动路由](autoRouters.md)
 
-* 数据的简洁访问 [mongo](orm.mongo.md) mysql postgres
+* 数据的简洁访问 [mongo](orm.mongo.md) [mysql](orm.mysql.md) [postgres](orm.postgres.md)
 
 * 包含数据访问的服务层和控制层的基类（对应传统的MVC）
 
 * schema 的自动验证
 
-* 作为消费者调用远程其他微服务
+* Cloudeer: 调用远程微服务
 
 * 权限验证（路由级别）
 

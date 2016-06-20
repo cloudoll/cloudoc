@@ -13,7 +13,7 @@
 
 连接数据库：
 
-```
+```javascript
 var mongo = require('cloudoll').orm.mongo;
 
 //这个方法只需在应用启动的时候调用一次
@@ -22,8 +22,8 @@ mongo.connect("mongodb://user:password@127.0.0.1:27017/order");
 
 查询：
 
-```
-var res = yield mongo.findOne('collectionName', {_id: ObjectId('xxxxx')}
+```javascript
+var res = yield mongo.findOne('collectionName', {_id: ObjectId('xxxxx')});
 
 ```
 
