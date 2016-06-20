@@ -17,7 +17,7 @@
 var mongo = require('cloudoll').orm.mongo;
 
 //这个方法只需在应用启动的时候调用一次
-mongo.connect("mongodb://user:password@112.74.29.211:27017/order");
+mongo.connect("mongodb://user:password@127.0.0.1:27017/order");
 ```
 
 查询：
