@@ -200,7 +200,7 @@ cloudoll 包含更多的功能，其中大多数功能都可以单独拿出来�
 
 * [自动路由](./autoRouters.md)
 
-* 数据的快捷访问 mongo mysql postgres
+* 数据的简洁访问 [mongo](orm.mongo.md) mysql postgres
 
 * 包含数据访问的服务层和控制层的基类（对应传统的MVC）
 
