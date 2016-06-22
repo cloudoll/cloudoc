@@ -67,7 +67,7 @@ export NODE_ENV='product'
 
 可以在路由方法中使用 this. 直接调用。
 
-#### echo
+#### echo(somthing)
 
 在路由中，可以使用 this.echo("xxxx") 输出结果。
 
@@ -101,6 +101,11 @@ module.exports = {
 };
 ```
 
+#### *getUser()
+
+使用此方法可以直接获取用户的基本信息。在包含 ticket 的情况下。
+
+此方法依赖 cloudarling 微服务。
 
 
 ### 自动映射 cloudeer 远程调用
