@@ -32,9 +32,7 @@ module.exports = {
 
 ```
 
-在 linux 或者 mac 下，可以不用配置 my_host。
-
-本机地址的读取顺序为：
+本机地址 my_host 的读取顺序为：
 
 config.my_host, 环境变量 my_host，自动读取第一个网卡的 ipv4 地址。
 
