@@ -137,6 +137,8 @@ module.exports = {
 
 参数和上面的原型一样。默认 method 为 POST。
 
+如果 cookie 里有 ticket ，则可以自动放入参数中，调用的时候无需指定 ticket。
+
 这个功能无法通过配置文件关闭，除非删除了 cloudeer 配置节点。
 
 
