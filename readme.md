@@ -137,7 +137,9 @@ module.exports = {
   debug         : true,
   port          : 3000,
   cloudeer      :{
-    server: 'http://127.0.0.1:8801'
+    type    : 'rest', //支持 'rest', 'tcp'
+    host    : '127.0.0.1',
+    port    : 8801
   },
   my_host       : "127.0.0.1"
 };
