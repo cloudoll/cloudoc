@@ -22,10 +22,11 @@ module.exports = {
     authenticate   : true
   },
   cloudeer             : {
-    server             : "http://127.0.0.1:8801",
-    not_a_consumer     : false,
-    not_a_service      : false,
-    no_methods_register: false
+    type    : 'tcp', //支持 'rest', 'tcp'
+    host    : '112.74.29.211',
+    port    : 2346,
+    username: 'knock',
+    password: 'password'
   }
 };
 

@@ -86,8 +86,10 @@ http://localhost:3000/open/hello/world
 
 
 
-### 2. 运行 cloudeer。
+### 2. 运行 cloudeer。 
 
+ **这部分可以使用 cloudeer-server 项目，相应的配置文件更换成 tcp**
+ 
 从 git 上 下载源码：
 
 ```

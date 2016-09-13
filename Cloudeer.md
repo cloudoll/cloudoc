@@ -26,6 +26,31 @@ npm i
 node index.js
 ```
 
+## cloudeer-server 项目
+
+这个是微服务注册中心的长连接版本
+
+开源地址在这里：
+
+https://code.aliyun.com/cloudark/cloudeer-server
+
+添加一个登录用户
+
+```
+ node add-user.js -u knock -p password
+```
+
+运行:
+
+```
+npm i
+```
+
+```
+node index.js -p 2345
+```
+
+
 
 ##  cloudoll 中的 Cloudeer
 
