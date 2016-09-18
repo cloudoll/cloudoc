@@ -70,3 +70,5 @@ var router = koaMiddle.autoRouters(['/controllers/open', '/controllers/manage'])
 controller_dirs: ['/api/open', '/api/admin', '/api/inner'],
 ```
 
+**请注意：修改默认扫描路径后，权限验证中间键将失效**
+
