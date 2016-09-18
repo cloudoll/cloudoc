@@ -211,6 +211,7 @@ node index.js
 不要担心端口问题，他会自动寻找合适的端口。**(这个不对了，现在的版本不支持自动更换端口)**
 
 
+
 ### 6. 证明一下
 
 现在你可以去并发执行 wow 的 /open/hello/world 了。
@@ -241,9 +242,22 @@ cloudoll 包含更多的功能，其中大多数功能都可以单独拿出来�
 
 * 作为消费者调用远程其他微服务
 
-* 权限验证（路由级别）
+* 权限验证
 
-* 内网接口的防火墙功能（正在实现）
+* 内网接口的防火墙功能
+
+不包含在这个项目中，但是依赖的项目有：
+
+* [注册中心 rest 版本](https://code.aliyun.com/cloudark/cloudeer)  
+
+* [注册中心 tcp 长连接版本](https://code.aliyun.com/cloudark/cloudeer-server)
+
+* [帐号和权限管理系统（passport）](https://code.aliyun.com/cloudark/cloudarling)
+
+* 后台管理前端框架
+
+
+
 
 # 贡献者：
 
