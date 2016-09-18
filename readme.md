@@ -220,7 +220,13 @@ cloudoll 包含更多的功能，其中大多数功能都可以单独拿出来�
 
 * [自动路由](./autoRouters.md)
 
-* 数据的简洁访问 [mongo](orm.mongo.md) [mysql](orm.mysql.md) [postgres](orm.postgres.md)
+* [数据的简洁访问 mongo](orm.mongo.md) 
+
+* [数据的简洁访问 mysql](orm.mysql.md) 
+
+* [数据的简洁访问 postgres](orm.postgres.md) 
+
+* 数据的简洁访问 redis
 
 * 包含数据访问的服务层和控制层的基类（对应传统的MVC）
 
@@ -230,7 +236,7 @@ cloudoll 包含更多的功能，其中大多数功能都可以单独拿出来�
 
 * 权限验证(依赖[帐号系统](https://code.aliyun.com/cloudark/cloudarling))
 
-* 内网接口的防火墙功能
+* 内网接口的权限验证
 
 * cloudoll 项目中依赖的库可以直接被微服务引用
 
