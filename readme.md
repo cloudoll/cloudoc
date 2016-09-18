@@ -226,11 +226,32 @@ cloudoll 包含更多的功能，其中大多数功能都可以单独拿出来�
 
 * schema 的自动验证
 
-* 作为消费者调用远程其他微服务
+* [作为消费者调用远程其他微服务](./Cloudeer.md)
 
-* 权限验证
+* 权限验证(依赖[帐号系统](https://code.aliyun.com/cloudark/cloudarling))
 
 * 内网接口的防火墙功能
+
+* cloudoll 项目中依赖的库可以直接被微服务引用
+
+为了避免冲突，下面的类库直接可以从 cloudoll 中引用，类库的名称和 npm 是一致的。
+
+命名空间是 cloudoll.libs：
+
+
+```
+cloudoll.libs = {
+   co     : require('co'),
+   koa    : require('koa'),
+   mongodb: require('mongodb'),
+   mysql  : require('mysql'),
+   pg     : require('pg'),
+   redis  : require('redis'),
+   tracer : require('tracer'),
+   request: require('request')
+}
+```
+
 
 # 其他的相关或者依赖项目有：
 
@@ -238,11 +259,11 @@ cloudoll 包含更多的功能，其中大多数功能都可以单独拿出来�
 
 * [注册中心 tcp 长连接版本](https://code.aliyun.com/cloudark/cloudeer-server)
 
-* [帐号和权限管理系统（passport）](https://code.aliyun.com/cloudark/cloudarling)
+* [帐号系统](https://code.aliyun.com/cloudark/cloudarling)
 
-* JAVA 工具类
+* [JAVA 工具类](https://code.aliyun.com/cloudark/cloudoll-java)
 
-* Android 类库
+* [Android 类库](https://code.aliyun.com/cloudark/cloudoll-android)
 
 * 后台管理前端框架
 
