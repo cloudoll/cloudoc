@@ -32,9 +32,9 @@ module.exports = {
 
 上面的文件「/api/open/hello.js 」将映射出两个路由：
 
-**GET /open/hello/world**
+*GET /open/hello/world*
 
-**POST /open/hello/world-of-cloudbeer**
+*POST /open/hello/world-of-cloudbeer*
 
 请注意：路径里没有 api 这个单词。
 
@@ -43,6 +43,8 @@ module.exports = {
 方法名的驼峰会被自动转化成短横杠连接。
 
 目前仅支持 GET 和 POST 两类方法。
+
+**请注意：使用 KoaApplication 无需手工调用以上的代码，只需要将商业逻辑放入相应的目录中**
 
 ## 为什么默认会使用三组路由？
 
@@ -62,5 +64,9 @@ module.exports = {
 var router = koaMiddle.autoRouters(['/controllers/open', '/controllers/manage']);
 ```
 
+在 KoaApplication 应用中，修改配置文件即可
 
+```
+controller_dirs: ['/api/open', '/api/admin', '/api/inner'],
+```
 
