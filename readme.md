@@ -283,6 +283,8 @@ cloudoll.libs = {
 
 [Lin](https://code.aliyun.com/u/Lin)
 
+[chuchur](https://code.aliyun.com/u/chuchur)
+
 [黄兴](http://user.qzone.qq.com/1922327128)
 
 [zhanxp](https://code.aliyun.com/u/zhanxp)
