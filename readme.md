@@ -157,7 +157,10 @@ http://localhost:8801/methods
 
 你可以直接拷贝过来。但需要改一些关键的地方。
 
-修改配置文件： /config/development.js，将 app_name 改成另一个， 现在改成 wow， 这样他才会变成另一个微服务。
+修改配置文件： /config/development.js：
+
+将 app_name 改成另一个， 现在改成 wow， 这样他才会变成另一个微服务。
+修改端口 port 为另一个。（之前的自动化端口在 pm2 运维的时候会出错，所以取消。）
 
 修改 /api/open/hello.js
 
