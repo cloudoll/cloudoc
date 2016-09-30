@@ -49,13 +49,13 @@ Cloudoll 项目: http://www.cloudoll.com
 
 架构并领导开发了如下产品:
 
-1. “创维广告平台”。此平台是创维电视，以及网站的广告投放和统计平台，并能接入
+1. 创维广告平台。此平台是创维电视，以及网站的广告投放和统计平台，并能接入
 第三方广告投放和监测。【Java, nodejs, python, redis, MySQL, mongoDB】
 
-2. “酷开帐户中心”。此系统是创维集团的统一帐号系统，目前已经接入了酷开的所有服务，以及创维的电视，机顶盒等相关产品。
+2. 酷开帐户中心。此系统是创维集团的统一帐号系统，目前已经接入了酷开的所有服务，以及创维的电视，机顶盒等相关产品。
 https://passport.coocaa.com 【Java, MySQL, redis】
 
-3. “多店铺商城”。此系统是类似 taobao 模式的购物商城，但运行在电视机端，并为创维电视单独定制。http://vip.coocaa.com。
+3. 多店铺商城。此系统是类似 taobao 模式的购物商城，但运行在电视机端，并为创维电视单独定制。http://vip.coocaa.com。
 【.NET, SQL Server】
 
 4. 在公司推行了 DevOps，在开发早期便和运维积极配合。并在公司率先使用了 git/gitlab, maven, jenkins， docker 等开发部署方法和工具。
@@ -67,11 +67,11 @@ https://passport.coocaa.com 【Java, MySQL, redis】
 
 架构并领导开发了如下产品:
 
-1. “IAP互联网应用平台”。此系统是一款基于SaaS模式的内容管理平台。可以构建企
+1. IAP互联网应用平台。此系统是一款基于SaaS模式的内容管理平台。可以构建企
 业宣传网站，新闻网站和网上商城系统。此平台还可以通过插件方式进行扩展。
 【.NET, SQL Server】
 
-2.“EAP 企业应用平台”。此系统是 SaaS 模式的企业内部管理系统，通过模块扩展和
+2. EAP 企业应用平台。此系统是 SaaS 模式的企业内部管理系统，通过模块扩展和
 权限控制可以在统一的平台下完成开发。【.NET, SQL Server】。
 https://github.com/cloudbeer/EAP
 
