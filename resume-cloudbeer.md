@@ -11,8 +11,6 @@
 
 GitHub: http://github.com/cloudbeer
 
-阿里云Code: https://code.aliyun.com/u/cloudbeer
-
 Cloudoll 项目: http://www.cloudoll.com 
 
 
@@ -33,11 +31,11 @@ Cloudoll 项目: http://www.cloudoll.com
 
 1. 优酷智能硬件官网。
 此项目完全使用 nodejs 技术重新构建，采用了分布式的微服务架构搭建，并使用 docker 容器技术进行部署和运维。
-其底层架构已经开源称为项目 [Cloudoll](https://code.aliyun.com/groups/cloudark)。
+其底层架构已经开源称为项目 [Cloudoll](https://github.com/cloudoll)。
 【nodejs, docker, mongodb, postgresSQL, redis 等】
 
 2. YoukuTV 内容服务后台。此项目后端微服务使用了开源框架 dubbo， 使用 java 开发了微服务。
-前台服务使用了 Cloudoll 的 [cloudeer 注册服务](https://code.aliyun.com/cloudark/cloudeer) 项目对外提供 rest 服务。
+前台服务使用了 Cloudoll 的 [cloudeer 注册服务](https://github.com/cloudoll/cloudoll-server-rest) 项目对外提供 rest 服务。
 【java, nodejs, mySQL, redis 等】
 
 3. YoukuTV 的 Web 版本的桌面系统(TV Launcher)。
