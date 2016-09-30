@@ -2,12 +2,12 @@
 
 ```
 {
-"adddress": "深圳市龙华新区锦绣江南",
-"电话"："13006699866",
-"Email": "cloudbeer@gmail.com",
-"GitHub": "http://github.com/cloudbeer",
-"阿里云Code": "https://code.aliyun.com/u/cloudbeer",
-"Cloudoll 项目": "http://www.cloudoll.com"
+    "地址": "深圳市龙华新区锦绣江南",
+    "电话": "13006699866",
+    "Email": "cloudbeer@gmail.com",
+    "GitHub": "http://github.com/cloudbeer",
+    "阿里云Code": "https://code.aliyun.com/u/cloudbeer",
+    "Cloudoll 项目": "http://www.cloudoll.com"
 }
 ```
 
