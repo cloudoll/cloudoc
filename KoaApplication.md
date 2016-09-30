@@ -138,7 +138,7 @@ module.exports = {
 
 参数和上面的原型一样。默认 method 为 POST。
 
-如果 cookie 里有 ticket ，则可以自动放入参数中，调用的时候无需指定 ticket。
+~~如果 cookie 里有 ticket ，则可以自动放入参数中，调用的时候无需指定 ticket。~~ 由于存在 csrf 攻击风险，此特性不再支持。 
 
 这个功能无法通过配置文件关闭，除非删除了 cloudeer 配置节点。
 
@@ -156,7 +156,7 @@ KoaApplication 自动加载了 cloudoll 的 errors 模块。
 ```javascript
 // 默认放在根目录下： errors.js
 // 这个文件的文件名可以配置，配置节点为：
-// my_errors_path: './my-errors.js'
+// my_errors_path: './errors.js'
 module.exports = {
   CUSTOM00      : {errno: -1, errText: "%s"},
   SYSTEM_ERROR01: {errno: -10, errText: "系统错误"}
@@ -178,7 +178,7 @@ errors.SYSTEM_ERROR01  直接调用，他已经是一个 Clouderr 的实例了�
 throw errors.SYSTEM_ERROR01;
 ```
 
-聪明的我已经看出了，是否需要参数以及参数的个数 是和 %s 的个数相关的。
+是否需要参数以及参数的个数 是和 %s 的个数相关的。
 
 [更多的错误处理请看这个文档](./Clouderr.md)
 
@@ -234,15 +234,16 @@ koa_middles_forbidden: {
 
 使用权限验证插件的前提本服务必须同时是一个消费端（consumer）。
 
-下面的配置节点必须为 false （或删除此配置）。
+微服务的内部接口（/inner 开头的 url）也同时被验证，只有那些在注册服务注册过的服务器才能访问内部接口。
+
+纯服务的微服务可以标记 not_a_consumer 为 true 。
 
 ```javascript
 cloudeer: {
-    not_a_consumer: false
+    not_a_consumer: true
 }
 ```
 
-具体参考 这个文档
 
 ### 自动路由
 
@@ -250,16 +251,16 @@ KoaApplication 会自动扫描目录，将方法和 url 自动对应起来，就
 
 这样，你就可以不用写那些 router 了。
 
-你可以不用担心性能，因为扫描操作只会在程序启动的时候运行一次。
+你可以不用担心自动扫描会影响性能，因为扫描操作只会在程序启动的时候运行一次。
 
 [具体参考这里](./autoRouters.md)
 
 ### 自动 json-schema 验证
 
-### 自动提交 cloudeer 的服务注册
+### 自动提交服务注册
 
-### 自动提交 cloudeer 的方法列表
+### 自动提交方法列表
 
-### 自动下载 cloudeer 的服务列表
+### 自动下载服务列表
 
 
