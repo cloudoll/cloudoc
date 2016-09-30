@@ -1,17 +1,15 @@
 # 谢正伟
 
-深圳市龙华新区锦绣江南
-
-电话：13006699866
-
-Email: cloudbeer@gmail.com
-
-GitHub: http://github.com/cloudbeer
-
-阿里云Code: https://code.aliyun.com/u/cloudbeer
-
-Cloudoll 项目 http://www.cloudoll.com
-
+```
+{
+"adddress": "深圳市龙华新区锦绣江南",
+"电话"："13006699866",
+"Email": "cloudbeer@gmail.com",
+"GitHub": "http://github.com/cloudbeer",
+"阿里云Code": "https://code.aliyun.com/u/cloudbeer",
+"Cloudoll 项目": "http://www.cloudoll.com"
+}
+```
 
 ## 教育
 
@@ -30,11 +28,11 @@ Cloudoll 项目 http://www.cloudoll.com
 1. 优酷智能硬件官网。
 此项目完全使用 nodejs 技术重新构建，采用了分布式的微服务架构搭建，并使用 docker 容器技术进行部署和运维。
 其底层架构已经开源称为项目 [Cloudoll](https://code.aliyun.com/groups/cloudark)。
-【nodejs，docker，mongodb，postgresSQL, redis 等】
+【nodejs, docker, mongodb, postgresSQL, redis 等】
 
 2. YoukuTV 内容服务后台。此项目后端微服务使用了开源框架 dubbo， 使用 java 开发了微服务。
 前台服务使用了 Cloudoll 的 [cloudeer 注册服务](https://code.aliyun.com/cloudark/cloudeer) 项目对外提供 rest 服务。
-【java，nodejs，mySQL, redis 等】
+【java, nodejs, mySQL, redis 等】
 
 3. YoukuTV 的 Web 版本的桌面系统(TV Launcher)。
 此项目使用了 WebGL 技术，可以在电视机的有限资源上高效运行。
@@ -48,17 +46,15 @@ Cloudoll 项目 http://www.cloudoll.com
 架构并领导开发了如下产品:
 
 1. “创维广告平台”。此平台是创维电视，以及网站的广告投放和统计平台，并能接入
-第三方广告投放和监测。【Java， nodejs，python, redis，MySQL, mongoDB】
+第三方广告投放和监测。【Java, nodejs, python, redis, MySQL, mongoDB】
 
-2. “酷开帐户中心”。此系统是创维集团的统一帐号系统，目前已经接入了酷开的所有
-服务，以及创维的电视，机顶盒等相关产品。https://passport.coocaa.com 【Java,
-MySQL, redis】
+2. “酷开帐户中心”。此系统是创维集团的统一帐号系统，目前已经接入了酷开的所有服务，以及创维的电视，机顶盒等相关产品。
+https://passport.coocaa.com 【Java, MySQL, redis】
 
-3. “多店铺商城”。此系统是类似 taobao 模式的购物商城，但运行在电视机端，并为
-创维电视单独定制。【.NET, SQL Server】http://vip.coocaa.com。
+3. “多店铺商城”。此系统是类似 taobao 模式的购物商城，但运行在电视机端，并为创维电视单独定制。http://vip.coocaa.com。
+【.NET, SQL Server】
 
-4. 在公司推行了 DevOps，在开发早期便和运维积极配合。并在公司率先使用了 git/gitlab,
-maven, jenkins， docker 等开发部署方法和工具。
+4. 在公司推行了 DevOps，在开发早期便和运维积极配合。并在公司率先使用了 git/gitlab, maven, jenkins， docker 等开发部署方法和工具。
 
 
 **技术总监 (2010.1 –2012.2)** 
