@@ -23,12 +23,12 @@ cloudoll 项目 http://www.cloudoll.com
 
 **应用软件开发负责人，架构师（2015.6 - now）**
 
-合一智能科技（深圳）有限公司 http://yj.youku.com
+合一智能科技（深圳）有限公司（优酷） http://yj.youku.com
 
 架构并领导开发了如下项目和产品：
 
 1. 优酷智能硬件官网。
-此项目完全使用 nodejs 技术重新构建，采用了分布式的微服务架构搭建，并尝试使用 docker 容器进行部署和运维。
+此项目完全使用 nodejs 技术重新构建，采用了分布式的微服务架构搭建，并使用 docker 容器技术进行部署和运维。
 其底层架构已经开源称为项目 [cloudoll](https://code.aliyun.com/groups/cloudark)。
 【nodejs，docker，mongodb，postgresSQL, redis 等】
 
@@ -37,7 +37,7 @@ cloudoll 项目 http://www.cloudoll.com
 【java，nodejs，mySQL, redis 等】
 
 3. YoukuTV 的 Web 版本的桌面系统(TV Launcher)。
-此项目使用了 WebGL 技术，可以在电视机上运行高效运行。
+此项目使用了 WebGL 技术，可以在电视机的有限资源上高效运行。
 此项目的部分代码抽象为 [Tivy 开源项目](https://github.com/cloudbeer/Tivy)。
 【javascript】
 
@@ -103,11 +103,11 @@ https://github.com/cloudbeer/EAP
 1. 架构并主持开发了“北京市高考咨询平台”。此平台是北京网通项目，为北京市10万 高考生提供的考前咨询的实时沟通平台。
 【.NET，Flash】
  
-2. 领导或参与了多个企业内训项目的开发。包括方正集团企业内训，北医三院内训，中 国电信企业内训等项目。
-[Java]
+2. 领导或参与了多个企业内训项目的开发。包括方正集团企业内训，北医三院内训，中国电信企业内训等项目。
+【Java，.NET】
 
 3. 参与了公司产品:“紫晶学习管理平台”的研发。
-[.NET]
+【.NET】
 
 **程序员，网站前端 (1999.10 –2000.9)** 
 
@@ -127,16 +127,16 @@ https://github.com/cloudbeer/EAP
 
 * 多年的软件开发经验，熟练掌握各种语言及架构。积极的心态，并能保持不断学习的热忱。 
 
-* 语言：Java, C#, nodejs，python, scala, php, groovy 等。
+* 语言：Java, C#, nodejs, python, scala, php, groovy 等。
 
-* 关系型数据库：SQL Server, MySQL, PostgreSQL, Oracle 等。
+* 关系型数据库：PostgreSQL, MySQL, SQL Server,  Oracle 等。
 
 * 非关系型：MongoDB, redis, memcached 等。
 
 * 精通 BS 架构软件的开发，精通各种 BS 模式。
 
-* 精通 Web 前端开发，精通 HTML5 JavaScript, CSS 等技术，并精通 jquery，angularjs, bootstrap 等框架。
+* 精通 Web 前端开发，精通 HTML, JavaScript, CSS 等技术，并精通 react, jquery, angularjs, bootstrap 等框架。
 
-* 精通 HTML5，CSS3 及其在移动设备上的应用。
+* 精通 HTML5, CSS3 及其在移动设备上的应用。
 
-* 熟悉移动设备的开发:android 平台，windows phone 平台以及 IOS (swift)。
+* 熟悉移动设备的开发：android 平台，windows phone 平台以及 IOS (swift)。
