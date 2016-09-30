@@ -10,7 +10,7 @@ GitHub: http://github.com/cloudbeer
 
 阿里云Code: https://code.aliyun.com/u/cloudbeer
 
-cloudoll 项目 http://www.cloudoll.com
+Cloudoll 项目 http://www.cloudoll.com
 
 
 ## 教育
@@ -29,11 +29,11 @@ cloudoll 项目 http://www.cloudoll.com
 
 1. 优酷智能硬件官网。
 此项目完全使用 nodejs 技术重新构建，采用了分布式的微服务架构搭建，并使用 docker 容器技术进行部署和运维。
-其底层架构已经开源称为项目 [cloudoll](https://code.aliyun.com/groups/cloudark)。
+其底层架构已经开源称为项目 [Cloudoll](https://code.aliyun.com/groups/cloudark)。
 【nodejs，docker，mongodb，postgresSQL, redis 等】
 
 2. YoukuTV 内容服务后台。此项目后端微服务使用了开源框架 dubbo， 使用 java 开发了微服务。
-前台服务使用了 cloudoll 的 [cloudeer 注册服务](https://code.aliyun.com/cloudark/cloudeer) 项目对外提供 rest 服务。
+前台服务使用了 Cloudoll 的 [cloudeer 注册服务](https://code.aliyun.com/cloudark/cloudeer) 项目对外提供 rest 服务。
 【java，nodejs，mySQL, redis 等】
 
 3. YoukuTV 的 Web 版本的桌面系统(TV Launcher)。
@@ -119,7 +119,7 @@ https://github.com/cloudbeer/EAP
 
 航天部第三研究院
 
-1. 惯导所热处理车间工艺员。
+1. 惯导所热处理工艺员。
 
 2. 在科技情报所担任科技英语翻译，为各科室提供前沿科技情报信息。
 
@@ -127,7 +127,7 @@ https://github.com/cloudbeer/EAP
 
 * 多年的软件开发经验，熟练掌握各种语言及架构。积极的心态，并能保持不断学习的热忱。 
 
-* 语言：Java, C#, nodejs, python, scala, php, groovy 等。
+* 语言：Java, nodejs, C#, python, scala, php, groovy 等。
 
 * 关系型数据库：PostgreSQL, MySQL, SQL Server,  Oracle 等。
 
@@ -135,8 +135,8 @@ https://github.com/cloudbeer/EAP
 
 * 精通 BS 架构软件的开发，精通各种 BS 模式。
 
-* 精通 Web 前端开发，精通 HTML, JavaScript, CSS 等技术，并精通 react, jquery, angularjs, bootstrap 等框架。
+* 精通 Web 前端开发，精通 HTML, JavaScript, CSS 等技术，精通 react, jquery, angularjs, bootstrap 等框架以及 webpack, gulp 等构建工具。
 
 * 精通 HTML5, CSS3 及其在移动设备上的应用。
 
-* 熟悉移动设备的开发：android 平台，windows phone 平台以及 IOS (swift)。
+* 熟悉移动设备的开发：Hybrid App 混合开发，android 平台，windows phone 平台以及 IOS (swift)。
