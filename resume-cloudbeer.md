@@ -27,15 +27,16 @@ cloudoll 项目 http://www.cloudoll.com
 
 架构并领导开发了如下项目和产品：
 
-1. 优酷智能硬件官网。此项目完全使用 nodejs 技术重新构建，并采用了分布式的微服务架构搭建，
+1. 优酷智能硬件官网。
+此项目完全使用 nodejs 技术重新构建，采用了分布式的微服务架构搭建，并尝试使用 docker 容器进行部署和运维。
 其底层架构已经开源称为项目 [cloudoll](https://code.aliyun.com/groups/cloudark)。
-【nodejs，mongodb，postgresSQL, redis 等】
+【nodejs，docker，mongodb，postgresSQL, redis 等】
 
-2. YoukuTV 内容服务后台。此项目后端微服务使用了开源框架 dubbo， 
-前台服务使用了 cloudoll 的 [cloudeer 注册服务](https://code.aliyun.com/cloudark/cloudeer) 项目，
-并采用 java 开发了微服务。【java，nodejs，mySQL, redis 等】
+2. YoukuTV 内容服务后台。此项目后端微服务使用了开源框架 dubbo， 使用 java 开发了微服务。
+前台服务使用了 cloudoll 的 [cloudeer 注册服务](https://code.aliyun.com/cloudark/cloudeer) 项目对外提供 rest 服务。
+【java，nodejs，mySQL, redis 等】
 
-3. YoukuTV 的 Web 版本的桌面系统(launcher)。
+3. YoukuTV 的 Web 版本的桌面系统(TV Launcher)。
 此项目使用了 WebGL 技术，可以在电视机上运行高效运行。
 此项目的部分代码抽象为 [Tivy 开源项目](https://github.com/cloudbeer/Tivy)。
 【javascript】
@@ -46,7 +47,7 @@ cloudoll 项目 http://www.cloudoll.com
 
 架构并领导开发了如下产品:
 
-1. “创维广告平台”，此平台是创维电视，以及网站的广告投放和统计平台，并能接入
+1. “创维广告平台”。此平台是创维电视，以及网站的广告投放和统计平台，并能接入
 第三方广告投放和监测。【Java， nodejs，python, redis，MySQL, mongoDB】
 
 2. “酷开帐户中心”。此系统是创维集团的统一帐号系统，目前已经接入了酷开的所有
