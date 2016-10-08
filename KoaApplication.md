@@ -1,6 +1,6 @@
 # KoaApplication
 
-自动的 koajs 应用程序，只需简单的配置，则可以得到一个强大的『配置优先的』Web 应用程序。
+自动的 koajs 应用程序，只需简单的配置，就可以得到一个强大的『配置优先』，但『约定优于配置』Web 应用程序。
 
 ## 配置文件总览
 
@@ -8,25 +8,26 @@
 
 ```javascript
 module.exports = {
-  debug                : true,
-  app_name             : "cloudoll",
-  my_host              : "localhost",
-  port                 : 3000,
-  controller_dirs      : ['/api/open', '/api/admin', '/api/inner'],
-  schema_path          : './schema',
-  my_errors_path       : './errors.js',
+  debug                : true,  //可以输出debug信息，在正式部署环境中，请删除此行此配置
+  app_name             : "cloudoll", //微服务的名称，在消费端的 rpc 的调用中，这个名字是区分微服务的关键，如果不指定，则读取项目目录名称
+  my_host              : "localhost", //本机的 ip，如果不指定，则会读取网卡的第一个 ip 地址
+  port                 : 3000, //微服务对外端口
+  controller_dirs      : ['/api/open', '/api/admin', '/api/inner'],  //cloudoll 会自动扫描这些目录，并映射出路由
+  schema_path          : './schema', //json-schema 的存放路径，可以方便的在应用中自动完成数据校验
+  my_errors_path       : './errors.js', //自定义的错误信息路径，按照约定的方式编写，可以得到一致的错误消息。
   koa_middles_forbidden: {
-    clouderr_handle: true,
-    auto_router    : true,
-    json_validator : true,
-    authenticate   : true
+    clouderr_handle: true,  //配置此节点，将禁用统一的错误信息功能。
+    auto_router    : true, //将禁用自动路由功能
+    json_validator : true, //将禁用 json-schema 的验证功能
+    authenticate   : true //将禁用权限验证模块
   },
   cloudeer             : {
     type    : 'tcp', //支持 'rest', 'tcp'
-    host    : '112.74.29.211',
-    port    : 2346,
-    username: 'knock',
-    password: 'password'
+    host    : '112.74.29.211', //注册中心的地址
+    port    : 2346, //注册中心的端口
+    username: 'knock', //注册中心的用户名
+    password: 'password', //注册中心的密码
+    not_a_consumer: true //标记本服务不是一个消费端，以节省注册中心和微服务的通讯消耗
   }
 };
 
@@ -39,8 +40,12 @@ config.my_host, 环境变量 my_host，自动读取第一个网卡的 ipv4 地�
 
 其实，所有的东西都可以不用配置哦。
 
+系统会按照默认约定正确运行。
+
 
 ## 根据不同的配置文件启动应用
+
+在实际生产环境中，我们需要不同的配置来运行程序。
 
 下面的例子将启动 /config/product.js 配置文件
 
@@ -62,7 +67,9 @@ export NODE_ENV='product'
 
 ## 我可以独立使用吗？
 
-可以！如果没有配置 cloudeer 节点，那么应用程序将会变成一个普通的 自动映射的 koa 框架。
+可以！如果没有配置 cloudeer 节点，那么应用程序将会变成一个普通的 web 应用程序。
+
+只需要将你的 'controller' 文件放入 '/api/open', '/api/admin', '/api/inner'  这三个文件夹中。 
 
 ## KoaApplication 包含如下的一些特性
 
@@ -93,7 +100,7 @@ export NODE_ENV='product'
 
 
 
-上面三个方法的代码示例:
+代码示例:
 
 ```
 module.exports = {
@@ -108,7 +115,7 @@ module.exports = {
 
 使用此方法可以直接获取用户的基本信息。在包含 ticket 的情况下。
 
-此方法依赖 cloudarling 微服务。
+此方法依赖 [cloudarling](https://github.com/cloudoll/cloudarling) 微服务。
 
 
 ### 自动映射 cloudeer 远程调用
@@ -195,21 +202,28 @@ koa_middles_forbidden: {
 }
 ```
 
-具体参考 [这个文档](./Clouderr.md)
+关于错误，具体参考 [这个文档](./Clouderr.md)
 
 
-### 已经自动加载的中间键：
+### 已经自动加载的中间件：
 
 * koa-bodyparser [参见这里](https://github.com/koajs/bodyparser)
+
+这个中间件自动解析 post 信息。
 
 * queryStringParser 这个插件将 query string 作为 json 放入 this.qs 中。
 
 
+
 ### 加载额外前置中间键
 
-有时候 koa 的中间键需要提前构造，比如 『静态文件』 服务。
+如果有另外的中间价需要加载，你可以直接使用
 
-前置中间键将放入构造函数中，示例如下：
+```
+app.use(...)
+```
+
+但如果中间件需要提前加载，比如 『静态文件』 服务，则需要将中间件放入构造函数中，示例如下：
 
 ```javascript
 var cloudoll = require('cloudoll');
