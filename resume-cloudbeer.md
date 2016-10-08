@@ -11,7 +11,9 @@
 
 GitHub: http://github.com/cloudbeer
 
-Cloudoll 项目: http://www.cloudoll.com 
+cloudoll 项目: http://www.cloudoll.com 
+
+cloudoll@github: https://github.com/cloudoll/cloudoll
 
 
 
