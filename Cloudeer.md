@@ -105,6 +105,9 @@ cloudeer.registerMethods([
 
 -->
 
+```
+let cloudeer = require('cloudoll').Cloudeer;
+```
 
 作为消费者，调用远程的方法：
 
@@ -120,11 +123,11 @@ cloudeer.invoke('GET', hello_world', '/open/hello/world', {id: 10}, function(err
 );
 ```
 
-服务数据存储在 Cloudeer.config 中，
+微服务列表数据存储在 Cloudeer.config 中，
 如果你想实时查看微服务列表，你可以简单的输出（应当在开发或者测试环境下使用）。
 
 ```
-this.echo(require('cloudoll').Cloudeer.config);
+this.echo(cloudeer.config);
 ```
 
 
