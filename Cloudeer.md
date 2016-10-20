@@ -1,5 +1,8 @@
 # Cloudeer
 
+Cloudeer 是远程服务调用(RPC)的客户端工具。
+
+<!--
 Cloudeer 包含 2 部分内容：
 
 cloudeer 是一个项目，是微服务的注册中心。
@@ -50,11 +53,10 @@ npm i
 node index.js -p 2345
 ```
 
-
-
 ##  cloudoll 中的 Cloudeer
 
-可以使用这个工具来定期下载 cloudeer 的服务器配置文件，并实现远程接口的调用。
+
+使用这个工具来定期下载注册中心的的服务配置文件，并可以实现远程接口的调用。
 
 首先需要创建 Cloudeer 实例：
 
@@ -101,6 +103,9 @@ cloudeer.registerMethods([
 
 ```
 
+-->
+
+
 作为消费者，调用远程的方法：
 
 ```
@@ -110,20 +115,30 @@ var data = yield cloudeer.invokeCo('GET', hello_world', '/open/hello/world', {id
 远程方法调用的 callback 版本
 
 ```
-cloudeer.invokeCo('GET', hello_world', '/open/hello/world', {id: 10}, function(err, data){
+cloudeer.invoke('GET', hello_world', '/open/hello/world', {id: 10}, function(err, data){
     //处理数据
 );
 ```
+
+服务数据存储在 Cloudeer.config 中，
+如果你想实时查看微服务列表，你可以简单的输出（应当在开发或者测试环境下使用）。
+
+```
+this.echo(require('cloudoll').Cloudeer.config);
+```
+
 
 ##  cloudoll.KoaAppliction 中的 Cloudeer
 
 使用 KoaAppliction 创建的应用程序，
 
-如果在配置文件中配置了 cloudeer 节点，则可以自动使用 cloudeer 的实例。
+如果在配置文件中配置了 cloudeer 节点，则可以很方便地使用 Cloudeer 。
 
-更加可以在路由中直接调用 this 关键字调用：
+可以在路由中直接调用 this 关键字调用：
 
-this.getCloudeer 和 this.postCloudeer。
+this.getCloudeer 和 this.postCloudeer【返回的是 generator】。
+
+示例：
 
 ```
 module.exports = {

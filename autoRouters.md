@@ -50,9 +50,9 @@ module.exports = {
 
  考虑到微服务一般会有三种应用场景：
 
- * 公网：/open
- * 管理后台：/admin
- * 内网调用（微服务之间调用）: /inner
+ * 公开接口：/open  这类接口将会完全公开给用户 
+ * 管理接口：/admin  这类接口公开给后台具有相应权限的管理员使用（依赖 cloudarling 微服务实现）
+ * 内部接口：/inner  这类接口仅允许在微服务网络之间调用
 
 在 KoaApplication 中，系统将会自动提交这三类方法到 cloudeer 注册中心以进行自动的权限绑定。
 
@@ -70,5 +70,5 @@ var router = koaMiddle.autoRouters(['/controllers/open', '/controllers/manage'])
 controller_dirs: ['/api/open', '/api/admin', '/api/inner'],
 ```
 
-**请注意：修改默认扫描路径后，权限验证中间键将失效**
+**请注意：对于自定义的路径，权限验证中间键将不能工作**
 
