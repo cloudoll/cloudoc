@@ -7,7 +7,7 @@ mongo没有像mysql这样的数据表约束，因此规定在存储时必须调�
 
 使用方式
 
-```
+```javascript
     let BaseService       = doll.mongo.BaseService;
     let service           = new BaseService('order');
     let order={};
