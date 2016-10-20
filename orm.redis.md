@@ -1,5 +1,13 @@
 ## orm.redis
 对redis访问做透明代理，目前只支持部分常用函数，设计初衷是redis 是key value形式的数据库，不同的业务设计防止出现数据覆盖。因此根据微服务划分命名空间，这样只需要保证每个微服务里的key不冲突就可以了，因此可以通过定义json的方式，json key在语法上要求名字唯一。正好满足需求，然后将这样key实例化成可访问redis的对象，这样代码里不用拼字符串key,直接使用json key就行。简单易用，易维护。
+### 连接
+config配置
+    module.exports = {
+      redis_url   : 'redis://112.74.29.211:6399',
+    };
+index.js
+    var redis = require('cloudoll').orm.redis;
+    redis.connect();
 ### 例子
 订单号是存储在redis的一个数组，下单时需要从redis里取一个元素做为订单号
 先假设redis里已经有了数据。
