@@ -13,17 +13,17 @@ cloudoll 包含很多强大的功能，其中大多数功能都可以单独拿�
 
 * [自动路由](./autoRouters.md)
 
-* [数据的简洁访问 mongo](orm.mongo.md) 
+* [数据的简洁访问 mongo](./orm.mongo.md) 
 
-* [数据的简洁访问 mysql](orm.mysql.md) 
+* [数据的简洁访问 mysql](./orm.mysql.md) 
 
-* [数据的简洁访问 postgres](orm.postgres.md) 
+* [数据的简洁访问 postgres](./orm.postgres.md) 
 
-* 数据的简洁访问 redis
+* [数据的简洁访问 redis](./orm.redis.md)
 
 * 包含数据访问的服务层和控制层的基类
 
-* schema 的自动验证
+* [schema 的自动验证](./JsonValidator.md)
 
 * [作为消费者调用远程其他微服务](./Cloudeer.md)
 
